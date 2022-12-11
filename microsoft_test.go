@@ -31,11 +31,11 @@ type MicrosoftTestSuite struct {
 }
 
 func (suite *MicrosoftTestSuite) SetupSuite() {
-	backend := NewMicrosoftBlobBackend("fake-container-cant-exist-fbce123", "")
+	backend := NewMicrosoftBlobBackend("fake-container-cant-exist-fbce123", "", "connstr")
 	suite.BrokenAzureBlobBackend = backend
 
 	containerName := os.Getenv("TEST_STORAGE_AZURE_CONTAINER")
-	backend = NewMicrosoftBlobBackend(containerName, "")
+	backend = NewMicrosoftBlobBackend(containerName, "", "connstr")
 	suite.NoPrefixAzureBlobBackend = backend
 
 	data := []byte("some object")

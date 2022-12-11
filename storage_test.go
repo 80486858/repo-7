@@ -67,7 +67,7 @@ func (suite *StorageTestSuite) setupStorageBackends() {
 			suite.StorageBackends["GoogleCS"] = Backend(NewGoogleCSBackend(gcsBucket, prefix))
 		}
 		if blobContainer != "" {
-			suite.StorageBackends["MicrosoftBlob"] = Backend(NewMicrosoftBlobBackend(blobContainer, prefix))
+			suite.StorageBackends["MicrosoftBlob"] = Backend(NewMicrosoftBlobBackend(blobContainer, prefix, "connstr"))
 		}
 		if ossBucket != "" {
 			suite.StorageBackends["AlibabaCloudOSS"] = Backend(NewAlibabaCloudOSSBackend(ossBucket, prefix, ossEndpoint, ""))
