@@ -1,4 +1,4 @@
-module github.com/chartmuseum/storage
+module github.com/getoutreach/storagewrapper
 
 go 1.17
 
