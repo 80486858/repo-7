@@ -32,13 +32,13 @@ type MicrosoftBlobBackend struct {
 }
 
 // NewMicrosoftBlobBackend creates a new instance of MicrosoftBlobBackend
-func NewMicrosoftBlobBackend(container, prefix, connstr string) *MicrosoftBlobBackend {
+func NewMicrosoftBlobBackend(container, prefix, connstr string) (*MicrosoftBlobBackend, error) {
 	if connstr == "" {
-		panic("connection string can't be empty")
+		return nil, errors.New("connection string can't be empty")
 	}
 	client, err := microsoft_storage.NewClientFromConnectionString(connstr)
 	if err != nil {
-		panic(err)
+		return nil, err
 	}
 
 	blobClient := client.GetBlobService()
@@ -49,7 +49,7 @@ func NewMicrosoftBlobBackend(container, prefix, connstr string) *MicrosoftBlobBa
 		Container: containerRef,
 	}
 
-	return b
+	return b, nil
 }
 
 // ListObjects lists all objects in Microsoft Azure Blob Storage container
