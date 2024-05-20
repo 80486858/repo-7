@@ -44,14 +44,14 @@ spec:
               port: pgcat
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
-          {{ if .Values.lifecycle.enabled }}
+        {{ if .Values.lifecycle.enabled }}
           lifecycle:
           {{ if .Values.lifecycle.postStart.enabled }}
             postStart:
               exec:
                 command:
                   {{- range .Values.lifecycle.postStartCommands }}
-                    - {{.}}
+                     {{- toYaml . | nindent 8}}
                   {{- end }}
           {{- end }}
           {{ if .Values.lifecycle.preStop.enabled }}
@@ -59,10 +59,10 @@ spec:
               exec:
                 command:
                   {{- range .Values.lifecycle.preStopCommands }}
-                    - {{.}}
+                    {{- toYaml . | nindent 20}}
                   {{- end }}
           {{- end }}
-          {{- end }}
+        {{- end }}
           volumeMounts:
           - mountPath: /etc/pgcat
             name: config
