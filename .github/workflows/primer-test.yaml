@@ -258,7 +258,7 @@ jobs:
     - continue-on-error: true
       id: python
       name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4.1.0
+      uses: actions/setup-python@v5.2.0
       with:
         python-version: ${{ matrix.python-version }}
     - continue-on-error: true
@@ -550,7 +550,7 @@ jobs:
     - continue-on-error: true
       id: python
       name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4.1.0
+      uses: actions/setup-python@v5.2.0
       with:
         python-version: ${{ matrix.python-version }}
     - continue-on-error: true
@@ -838,7 +838,7 @@ jobs:
     - continue-on-error: true
       id: python
       name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4.1.0
+      uses: actions/setup-python@v5.2.0
       with:
         python-version: ${{ matrix.python-version }}
     - continue-on-error: true
