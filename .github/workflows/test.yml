@@ -252,7 +252,7 @@ jobs:
 
         '
     - continue-on-error: true
-      uses: codecov/codecov-action@v1.0.15
+      uses: codecov/codecov-action@v4.6.0
       with:
         file: ./coverage.txt
     - name: after
