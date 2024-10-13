@@ -46,7 +46,7 @@
     "@react-stately/tabs": "^3.4.1",
     "@react-stately/tree": "^3.6.1",
     "@react-types/shared": "^3.18.1",
-    "@sentry-internal/global-search": "^0.5.7",
+    "@sentry-internal/global-search": "^1.1.0",
     "@sentry-internal/react-inspector": "6.0.1-4",
     "@sentry-internal/rrweb": "1.108.0",
     "@sentry-internal/rrweb-player": "1.108.0",
