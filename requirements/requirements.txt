@@ -27,7 +27,7 @@ attrs==24.2.0
     #   referencing
 avro @ https://github.com/aiven/avro/archive/5a82d57f2a650fd87c819a30e433f1abb2c76ca2.tar.gz#subdirectory=lang/py
     # via karapace (/karapace/pyproject.toml)
-cachetools==5.3.3
+cachetools==5.5.0
     # via karapace (/karapace/pyproject.toml)
 confluent-kafka==2.4.0
     # via karapace (/karapace/pyproject.toml)
