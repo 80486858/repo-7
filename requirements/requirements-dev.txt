@@ -111,7 +111,7 @@ lz4==4.3.3
     # via karapace (/karapace/pyproject.toml)
 markdown-it-py==3.0.0
     # via rich
-markupsafe==2.1.5
+markupsafe==3.0.1
     # via
     #   jinja2
     #   werkzeug
