@@ -531,7 +531,7 @@ jobs:
         username: ${{ github.actor }}
     - continue-on-error: true
       name: Push to Docker Hub
-      uses: docker/build-push-action@v4
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile.${{ matrix.target }}
         push: true
@@ -539,7 +539,7 @@ jobs:
           }}:latest
     - continue-on-error: true
       name: Build container image
-      uses: docker/build-push-action@v4
+      uses: docker/build-push-action@v6
       with:
         file: Dockerfile.${{ matrix.target }}
         push: true
