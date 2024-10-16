@@ -1,17 +1,34 @@
 apiVersion: v1
 entries:
-  pgcat:
+  dify:
   - apiVersion: v2
-    appVersion: 1.1.1
-    created: "2024-10-15T20:52:46.313204708Z"
-    description: A Helm chart for PgCat a PostgreSQL pooler and proxy (like PgBouncer)
-      with support for sharding, load balancing, failover and mirroring.
-    digest: 0e92da81db43629d7f01e871fe558cced72a3a36f0c3c25679cd979fe7275d51
-    maintainers:
-    - email: support@w6d.io
-      name: Wildcard
-    name: pgcat
+    appVersion: 0.6.16
+    created: "2024-10-16T08:56:24.672541314Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - postgres
+      version: 12.5.6
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - redis
+      version: 16.13.2
+    - condition: weaviate.enabled
+      name: weaviate
+      repository: https://weaviate.github.io/weaviate-helm
+      tags:
+      - vector
+      - search
+      version: 16.1.0
+    description: Instant cloud deployment for https://github.com/langgenius/dify.
+    digest: 8f7867e4745a3428510333407f9e249bb866dbbcddbe290d5ada32defa9bca95
+    name: dify
+    type: application
     urls:
-    - https://github.com/80486858/repo-7/releases/download/pgcat-0.2.0/pgcat-0.2.0.tgz
-    version: 0.2.0
-generated: "2024-10-15T20:52:46.313215569Z"
+    - https://github.com/80486858/repo-7/releases/download/dify-0.21.0/dify-0.21.0.tgz
+    version: 0.21.0
+generated: "2024-10-16T08:56:24.67255013Z"
