@@ -509,7 +509,7 @@ jobs:
         name: artifact
         path: dist
     - continue-on-error: true
-      uses: pypa/gh-action-pypi-publish@v1.8.14
+      uses: pypa/gh-action-pypi-publish@v1.10.3
       with:
         password: ${{ secrets.pypi_password }}
         user: __token__
@@ -768,7 +768,7 @@ jobs:
         name: artifact
         path: dist
     - continue-on-error: true
-      uses: pypa/gh-action-pypi-publish@v1.8.14
+      uses: pypa/gh-action-pypi-publish@v1.10.3
       with:
         password: ${{ secrets.test_pypi_password }}
         repository-url: https://test.pypi.org/legacy/
