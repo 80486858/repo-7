@@ -270,7 +270,7 @@ jobs:
     - continue-on-error: true
       id: has-changesets
       name: Get changed files in the changesets folder
-      uses: tj-actions/changed-files@1c938490c880156b746568a518594309cfb3f66b
+      uses: tj-actions/changed-files@c3a1bb2c992d77180ae65be6ae6c166cf40f857c
       with:
         files: '.changeset/**
 
